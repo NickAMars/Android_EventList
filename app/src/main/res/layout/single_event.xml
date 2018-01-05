@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/event_title"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:layout_weight="1.55"
+                android:gravity="center"
+                android:hint="Title"
+                android:textSize="18sp" />
+
+            <CheckBox
+                android:id="@+id/event_check_box"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="onClick"
+                android:text="Active" />
+        </LinearLayout>
+        <EditText
+            android:id="@+id/event_description_et"
+            android:layout_width="match_parent"
+            android:layout_height="408dp"
+            android:gravity="start"
+            android:hint="Description"
+            android:textSize="18sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="142dp"
+            tools:ignore="ExtraText">
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/event_calender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/event_save"
+                android:layout_marginEnd="19dp"
+                android:layout_marginRight="19dp"
+                android:layout_toLeftOf="@+id/event_time"
+                android:layout_toStartOf="@+id/event_time"
+                android:onClick="onClick"
+                android:src="@android:drawable/ic_menu_my_calendar"
+                app:fabSize="normal"
+                app:rippleColor="#FDFDFD" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/event_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/event_calender"
+                android:layout_alignEnd="@+id/event_date_time_cal"
+                android:layout_alignRight="@+id/event_date_time_cal"
+                android:layout_marginEnd="46dp"
+                android:layout_marginRight="46dp"
+                android:onClick="onClick"
+                android:src="@android:drawable/btn_star"
+                app:fabSize="normal"
+                app:rippleColor="#FDFDFD" />
+
+
+            <TextView
+                android:id="@+id/event_date_time_cal"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="21dp"
+                android:text="Calender"
+                android:textSize="16sp" />
+
+                
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/event_save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/event_date_time_cal"
+                android:layout_marginLeft="23dp"
+                android:layout_marginStart="23dp"
+                android:layout_toEndOf="@+id/event_date_time_cal"
+                android:layout_toRightOf="@+id/event_date_time_cal"
+                android:onClick="onClick"
+                android:src="@android:drawable/ic_menu_save"
+                app:fabSize="normal"
+                app:rippleColor="#FDFDFD" />
+                
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/event_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onClick"
+                android:src="@android:drawable/ic_delete"
+                app:fabSize="normal"
+                app:rippleColor="#FDFDFD"
+                android:layout_alignTop="@+id/event_save"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="18dp"
+                android:layout_marginEnd="18dp"
+                tools:ignore="RelativeOverlap" />
+        </RelativeLayout>
+
+    </LinearLayout>
+</ScrollView>
