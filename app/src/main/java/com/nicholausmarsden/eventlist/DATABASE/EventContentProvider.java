@@ -20,7 +20,7 @@ import com.nicholausmarsden.eventlist.DATABASE.FieldName.EventFieldName;
 
 public class EventContentProvider extends ContentProvider {
     private static final String TAG = "EventContentProvider";
-    public static final String AUTHORITY = "com.example.nicho.todolist.DATABASE.EventContentProvider";
+    public static final String AUTHORITY = "com.nicholausmarsden.eventlist.DATABASE.EventContentProvider";
     private static final String BASE_PATH = "base";
     public static final Uri CONTENT_URI = Uri.parse("content://" + AUTHORITY + "/" + BASE_PATH);
     private static final int CODE_1 = 1;
